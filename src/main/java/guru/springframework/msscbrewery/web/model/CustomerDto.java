@@ -12,9 +12,12 @@ import java.util.UUID;
  */
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class CustomerDto {
-    private UUID id;
+public class CustomerDto extends BaseDto {
     private String name;
+
+    @Builder
+    public CustomerDto(UUID id, String name) {
+        super(id);
+        this.name = name;
+    }
 }

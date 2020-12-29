@@ -11,9 +11,10 @@ import java.util.UUID;
 /**
  * Created by jt on 2019-04-20.
  */
-@RequestMapping("/api/v1/beer")
+@RequestMapping(BeerController.BASE_URL)
 @RestController
 public class BeerController {
+    public static final String BASE_URL = "/api/v1/beer";
 
     private final BeerService beerService;
 

@@ -13,8 +13,9 @@ import java.util.UUID;
  * Created by ezmobivietnam on 2020-12-28.
  */
 @RestController
-@RequestMapping("/api/v1/customer")
+@RequestMapping(CustomerController.BASE_URL)
 public class CustomerController {
+    public static final String BASE_URL = "/api/v1/customer";
     private final CustomerService customerService;
 
     public CustomerController(CustomerService customerService) {
